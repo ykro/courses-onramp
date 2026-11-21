@@ -1,41 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 326" width="920" height="326" role="img" aria-label="Mapa de los tres repositorios On-Ramp con 5 pasos independientes cada uno">
-  <rect width="920" height="326" rx="12" fill="#F8F7F4" stroke="#E2E0D8" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 338" width="920" height="338" role="img" aria-label="Mapa de los tres repositorios On-Ramp con 5 pasos independientes, Testing, ADR y Firebase">
+  <rect width="920" height="338" rx="12" fill="#F8F7F4" stroke="#E2E0D8" stroke-width="1.5"/>
   <text x="32" y="42" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="700" fill="#1C1B19">Nivelación rápida en 5 pasos independientes (~60 min antes de cada curso)</text>
-  <text x="32" y="64" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#68645B">No hace falta seguirlos en orden: puedes empezar directo en el Paso 3 o el que necesites reforzar.</text>
+  <text x="32" y="64" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#68645B">No hace falta seguirlos en orden. Cada repo incluye Testing desde cero (Paso 5), glosario, ejemplo de ADR y guía de Firebase donde aplica.</text>
 
   <!-- Backend -->
-  <rect x="32" y="88" width="272" height="208" rx="10" fill="#FFFFFF" stroke="#0F5C4D" stroke-width="2"/>
+  <rect x="32" y="88" width="272" height="220" rx="10" fill="#FFFFFF" stroke="#0F5C4D" stroke-width="2"/>
   <rect x="32" y="88" width="272" height="34" rx="10" fill="#E5F3EF"/>
   <text x="48" y="110" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#0F5C4D">Backend · Python y FastAPI</text>
-  <text x="48" y="142" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 1 · HTTP y estado aislado</text>
-  <text x="48" y="164" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 2 · Validación con Pydantic</text>
-  <text x="48" y="186" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 3 · SQLite relacional e índice</text>
-  <text x="48" y="208" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 4 · Depends, JWT y 401/403</text>
-  <text x="48" y="230" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 5 · Concurrencia con Lock</text>
-  <rect x="48" y="250" width="240" height="28" rx="6" fill="#F2F0EA"/>
-  <text x="58" y="268" font-family="JetBrains Mono, monospace" font-size="11.2" fill="#1C1B19">uv run onramp check --paso N</text>
+  <text x="48" y="142" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 1 · HTTP y validación Pydantic</text>
+  <text x="48" y="164" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 2 · SQLite relacional e índice</text>
+  <text x="48" y="186" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 3 · Depends, JWT y 401/403</text>
+  <text x="48" y="208" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 4 · Concurrencia con Lock</text>
+  <text x="48" y="230" font-family="Inter, -apple-system, sans-serif" font-size="12.5" font-weight="600" fill="#0F5C4D">Paso 5 · Pruebas desde cero (pytest)</text>
+  <text x="48" y="251" font-family="Inter, -apple-system, sans-serif" font-size="11.5" fill="#68645B">+ Glosario y ejemplo de ADR</text>
+  <rect x="48" y="264" width="240" height="28" rx="6" fill="#F2F0EA"/>
+  <text x="58" y="282" font-family="JetBrains Mono, monospace" font-size="11.2" fill="#1C1B19">uv run onramp check --paso N</text>
 
   <!-- Frontend -->
-  <rect x="324" y="88" width="272" height="208" rx="10" fill="#FFFFFF" stroke="#1E40AF" stroke-width="2"/>
+  <rect x="324" y="88" width="272" height="220" rx="10" fill="#FFFFFF" stroke="#1E40AF" stroke-width="2"/>
   <rect x="324" y="88" width="272" height="34" rx="10" fill="#EBF0FE"/>
   <text x="340" y="110" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1E40AF">Frontend · React y Next.js</text>
-  <text x="340" y="142" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 1 · HTML semántico y teclado</text>
-  <text x="340" y="164" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 2 · CSS Flexbox, Grid y foco</text>
-  <text x="340" y="186" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 3 · Estado inmutable y key</text>
-  <text x="340" y="208" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 4 · Tipos seguros en inputs</text>
-  <text x="340" y="230" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 5 · fetch, Abort y frontera</text>
-  <rect x="340" y="250" width="240" height="28" rx="6" fill="#F2F0EA"/>
-  <text x="350" y="268" font-family="JetBrains Mono, monospace" font-size="11.2" fill="#1C1B19">npm run check:pasoN</text>
+  <text x="340" y="142" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 1 · HTML semántico y CSS</text>
+  <text x="340" y="164" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 2 · Estado inmutable y key</text>
+  <text x="340" y="186" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 3 · Tipos seguros en inputs</text>
+  <text x="340" y="208" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 4 · fetch, Abort y frontera</text>
+  <text x="340" y="230" font-family="Inter, -apple-system, sans-serif" font-size="12.5" font-weight="600" fill="#1E40AF">Paso 5 · Pruebas desde cero (Vitest)</text>
+  <text x="340" y="251" font-family="Inter, -apple-system, sans-serif" font-size="11.5" fill="#68645B">+ Guías de Firebase y ADR</text>
+  <rect x="340" y="264" width="240" height="28" rx="6" fill="#F2F0EA"/>
+  <text x="350" y="282" font-family="JetBrains Mono, monospace" font-size="11.2" fill="#1C1B19">npm run check:pasoN</text>
 
   <!-- Android -->
-  <rect x="616" y="88" width="272" height="208" rx="10" fill="#FFFFFF" stroke="#B84318" stroke-width="2"/>
+  <rect x="616" y="88" width="272" height="220" rx="10" fill="#FFFFFF" stroke="#B84318" stroke-width="2"/>
   <rect x="616" y="88" width="272" height="34" rx="10" fill="#FCECE6"/>
   <text x="632" y="110" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#B84318">Android · Kotlin y Compose</text>
-  <text x="632" y="142" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 1 · Entorno JDK 21 y SDK</text>
-  <text x="632" y="164" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 2 · Kotlin y StateFlow</text>
-  <text x="632" y="186" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 3 · Corrutinas y estado UI</text>
-  <text x="632" y="208" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 4 · HTTP y JSON tolerante</text>
-  <text x="632" y="230" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 5 · SQLite y upsert (Room)</text>
-  <rect x="632" y="250" width="240" height="28" rx="6" fill="#F2F0EA"/>
-  <text x="642" y="268" font-family="JetBrains Mono, monospace" font-size="11.2" fill="#1C1B19">./gradlew pasoN --no-parallel</text>
+  <text x="632" y="142" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 1 · Kotlin y StateFlow</text>
+  <text x="632" y="164" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 2 · Corrutinas y estado UI</text>
+  <text x="632" y="186" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 3 · HTTP y JSON tolerante</text>
+  <text x="632" y="208" font-family="Inter, -apple-system, sans-serif" font-size="12.5" fill="#1C1B19">Paso 4 · SQLite y upsert (Room)</text>
+  <text x="632" y="230" font-family="Inter, -apple-system, sans-serif" font-size="12.5" font-weight="600" fill="#B84318">Paso 5 · Pruebas desde cero (JUnit)</text>
+  <text x="632" y="251" font-family="Inter, -apple-system, sans-serif" font-size="11.5" fill="#68645B">+ doctor + Guías de Firebase y ADR</text>
+  <rect x="632" y="264" width="240" height="28" rx="6" fill="#F2F0EA"/>
+  <text x="642" y="282" font-family="JetBrains Mono, monospace" font-size="11.2" fill="#1C1B19">./gradlew pasoN --no-parallel</text>
 </svg>

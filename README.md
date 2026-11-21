@@ -2,7 +2,7 @@
 
 Este índice reúne los tres repositorios de práctica corta (**~60 minutos cada uno**) pensados para cualquier estudiante que diga *"no entiendo"* o *"el curso está muy avanzado"* antes de entrar a **Backend (FastAPI)**, **Frontend (React y Next.js)** o **Android (Kotlin y Jetpack Compose)**.
 
-Cada repositorio tiene **5 pasos independientes**: no hace falta seguirlos en orden. Si ya dominas HTTP o HTML, puedes empezar directo en el **Paso 3** o en el tema que necesites reforzar, verificar solo ese paso con un comando y consultar el repositorio de solución donde queda detallado qué se trabajó y qué se cambió en cada paso.
+Cada repositorio tiene **5 pasos independientes**: no hace falta seguirlos en orden. Si ya dominas HTTP o HTML, puedes empezar directo en el **Paso 3**, en el **Paso 5 (Testing desde cero)** o en el tema que necesites reforzar, verificar solo ese paso con un comando y consultar el repositorio de solución donde queda detallado qué se trabajó y qué se cambió en cada paso.
 
 ![Mapa de los tres repositorios On-Ramp](docs/diagrams/overview.svg)
 
@@ -21,29 +21,33 @@ Cada repositorio tiene **5 pasos independientes**: no hace falta seguirlos en or
 ## Qué practicas en cada uno
 
 ### 1. Backend — [ykro/backend-onramp](https://github.com/ykro/backend-onramp)
-- **Paso 1:** peticiones y respuestas HTTP (`201`, `204`, `404`) y aislamiento de estado entre peticiones.
-- **Paso 2:** validación estricta con Pydantic (`extra="forbid"`, `Decimal` para dinero y `422`).
-- **Paso 3:** tu primera base de datos en SQLite puro (`PRAGMA foreign_keys = ON`, PK/FK, `INNER JOIN`, `ORDER BY/LIMIT` con `?` e índice verificado con `EXPLAIN QUERY PLAN`).
-- **Paso 4:** `Depends`, `dependency_overrides`, lectura Base64Url de un JWT y separación `401` frente a `403`.
-- **Paso 5:** protección contra llamadas simultáneas con `threading.Lock` bajo `Barrier(5)`.
+- **Paso 1:** peticiones y respuestas HTTP (`201`, `204`, `404`, `422`), validación con Pydantic (`extra="forbid"`, `Decimal`) y aislamiento de estado entre peticiones.
+- **Paso 2:** tu primera base de datos en SQLite puro (`PRAGMA foreign_keys = ON`, PK/FK, `INNER JOIN`, `ORDER BY/LIMIT` con `?` e índice verificado con `EXPLAIN QUERY PLAN`).
+- **Paso 3:** `Depends`, `dependency_overrides`, lectura Base64Url de un JWT y separación `401` frente a `403`.
+- **Paso 4:** protección contra llamadas simultáneas con `threading.Lock` bajo `Barrier(5)`.
+- **Paso 5:** pruebas automatizadas desde cero con `pytest` (Arrange-Act-Assert, casos borde y atrapar un bug plantado).
+- **Lectura rápida incluida:** `docs/glosario.md` y ejemplo de ADR (`docs/adr-ejemplo.md`).
 - **Verificación por paso:** `uv run onramp check --paso 1` .. `--paso 5` (o `uv run onramp check` para todos).
 - **Solución paso a paso:** [ykro/backend-onramp-solution](https://github.com/ykro/backend-onramp-solution).
 
 ### 2. Frontend — [ykro/frontend-onramp](https://github.com/ykro/frontend-onramp)
-- **Paso 1:** pasar de `<div>`s a HTML semántico operable con teclado (`<label>`, `aria-invalid`, `aria-describedby` y `getByRole`).
-- **Paso 2:** layout con Flexbox, CSS Grid de 2 columnas y foco visible (`:focus-visible`).
-- **Paso 3:** por qué mutar un arreglo con `.push()` congela React (`Object.is`) y por qué `key={index}` desordena inputs al filtrar.
-- **Paso 4:** convertir texto de `<input>` de forma segura sin mentirle a TypeScript con `as number`.
-- **Paso 5:** revisar `response.ok` ante HTTP 404, cancelar búsquedas lentas con `AbortController` y separar `"use client"` de secretos de servidor.
+- **Paso 1:** HTML semántico operable con teclado (`<label>`, `aria-invalid`, `aria-describedby`, `getByRole`), Flexbox, CSS Grid de 2 columnas y `:focus-visible`.
+- **Paso 2:** por qué mutar un arreglo con `.push()` congela React (`Object.is`) y por qué `key={index}` desordena inputs al filtrar.
+- **Paso 3:** convertir texto de `<input>` de forma segura sin mentirle a TypeScript con `as number`.
+- **Paso 4:** revisar `response.ok` ante HTTP 404, cancelar búsquedas lentas con `AbortController` y separar `"use client"` de secretos de servidor.
+- **Paso 5:** pruebas automatizadas desde cero con Vitest y Testing Library (Arrange-Act-Assert, casos borde y atrapar un bug plantado).
+- **Lecturas rápidas incluidas:** guía visual de **Firebase** (`docs/firebase.md`), ejemplo de **ADR** (`docs/adr-ejemplo.md`) y `docs/glosario.md`.
 - **Verificación por paso:** `npm run check:paso1` .. `check:paso5` (o `npm run check` para todos).
 - **Solución paso a paso:** [ykro/frontend-onramp-solution](https://github.com/ykro/frontend-onramp-solution).
 
 ### 3. Android — [ykro/android-onramp](https://github.com/ykro/android-onramp)
-- **Paso 1:** verificación de entorno (`JDK 21+` y `ANDROID_HOME`).
-- **Paso 2:** lambdas con receptor (`Column { Text(...) }`, `module { single { ... } }`), `sealed interface` y `StateFlow` inmutable.
-- **Paso 3:** `suspend` y `delay` con reloj virtual (`runTest` + Turbine), no atrapar `CancellationException` y `remember` al redibujar.
-- **Paso 4:** lectura tolerante de JSON contra `MockWebServer` y errores HTTP/parseo.
-- **Paso 5:** tu primera tabla SQLite (`CREATE TABLE`, `PRIMARY KEY`, `SELECT/ORDER BY` y `ON CONFLICT DO UPDATE` para no borrar favoritos locales + equivalencia a Room 3).
+- **Inicio rápido:** `./gradlew doctor --no-parallel` verifica JDK 21+ y `ANDROID_HOME`.
+- **Paso 1:** lambdas con receptor (`Column { Text(...) }`, `module { single { ... } }`), `sealed interface` y `StateFlow` inmutable.
+- **Paso 2:** `suspend` y `delay` con reloj virtual (`runTest` + Turbine), no atrapar `CancellationException` y `remember` al redibujar.
+- **Paso 3:** lectura tolerante de JSON contra `MockWebServer` y errores HTTP/parseo.
+- **Paso 4:** tu primera tabla SQLite (`CREATE TABLE`, `PRIMARY KEY`, `SELECT/ORDER BY` y `ON CONFLICT DO UPDATE` para no borrar favoritos locales + puente a Room 3).
+- **Paso 5:** pruebas automatizadas desde cero con JUnit y Turbine (Arrange-Act-Assert, casos borde y atrapar un bug plantado).
+- **Lecturas rápidas incluidas:** guía visual de **Firebase** (`docs/firebase.md`), ejemplo de **ADR** (`docs/adr-ejemplo.md`) y `docs/glosario.md`.
 - **Verificación por paso:** `./gradlew paso1 --no-parallel` .. `paso5` (o `./gradlew ready --no-parallel` para todos, sin emulador).
 - **Solución paso a paso:** [ykro/android-onramp-solution](https://github.com/ykro/android-onramp-solution).
 
