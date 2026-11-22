@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 980 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
-  <title id="t">Los tres on-ramps, 6 pasos cada uno</title>
-  <desc id="d">Backend, Frontend y Android. Cada on-ramp tiene un Paso 0 de entorno y cinco pasos más, de tres horas y media a cuatro horas en total.</desc>
-  <rect width="980" height="400" fill="#fafaf7"/>
+<svg viewBox="0 0 980 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">Los tres on-ramps: seis pasos en Backend y Frontend, siete en Android</title>
+  <desc id="d">Backend, Frontend y Android. Cada on-ramp tiene un Paso 0 de entorno. Backend y Frontend suman cinco pasos más (unas tres horas y media); Android suma seis (unas cinco horas y media).</desc>
+  <rect width="980" height="420" fill="#fafaf7"/>
   <g font-family="Inter, Helvetica, Arial, sans-serif">
-    <text x="30" y="50" font-size="24" font-weight="700" fill="#1c1917">On-ramps · 6 pasos antes de cada curso</text>
-    <text x="30" y="78" font-size="15" fill="#57534e">De 3.5 a 4 horas cada uno · primera vez: del 0 al 5 en orden · cada paso se verifica por separado</text>
-    <rect x="30" y="100" width="296" height="270" rx="12" fill="#ffffff" stroke="#d6d3d1"/>
-    <rect x="30" y="100" width="6" height="270" rx="3" fill="#1d4ed8"/>
+    <text x="30" y="50" font-size="24" font-weight="700" fill="#1c1917">On-ramps · nivelación antes de cada curso</text>
+    <text x="30" y="78" font-size="15" fill="#57534e">De 3.5 a 5 horas · para la Unidad 1 bastan de 2 a 4 · cada paso se verifica por separado</text>
+    <rect x="30" y="100" width="296" height="296" rx="12" fill="#ffffff" stroke="#d6d3d1"/>
+    <rect x="30" y="100" width="6" height="296" rx="3" fill="#1d4ed8"/>
     <text x="52" y="134" font-size="17" font-weight="700" fill="#1c1917">Backend · Python y FastAPI</text>
     <text x="52" y="170" font-size="14" fill="#b45309" font-weight="600">Paso 0 · Entorno y primer servidor</text>
     <text x="52" y="198" font-size="14" fill="#44403c">Paso 1 · HTTP y validación con Pydantic</text>
@@ -15,26 +15,27 @@
     <text x="52" y="254" font-size="14" fill="#44403c">Paso 3 · Depends, JWT, 401 y 403</text>
     <text x="52" y="282" font-size="14" fill="#44403c">Paso 4 · Concurrencia con Lock</text>
     <text x="52" y="310" font-size="14" fill="#44403c">Paso 5 · Tests desde cero (pytest)</text>
-    <text x="52" y="348" font-size="13" font-family="Menlo, monospace" fill="#1d4ed8">uv run onramp check --paso N</text>
-    <rect x="348" y="100" width="296" height="270" rx="12" fill="#ffffff" stroke="#d6d3d1"/>
-    <rect x="348" y="100" width="6" height="270" rx="3" fill="#1d4ed8"/>
+    <text x="52" y="372" font-size="13" font-family="Menlo, monospace" fill="#1d4ed8">uv run onramp check --paso N</text>
+    <rect x="348" y="100" width="296" height="296" rx="12" fill="#ffffff" stroke="#d6d3d1"/>
+    <rect x="348" y="100" width="6" height="296" rx="3" fill="#1d4ed8"/>
     <text x="370" y="134" font-size="17" font-weight="700" fill="#1c1917">Frontend · React y Next.js</text>
     <text x="370" y="170" font-size="14" fill="#b45309" font-weight="600">Paso 0 · Entorno y primer componente</text>
     <text x="370" y="198" font-size="14" fill="#44403c">Paso 1 · HTML semántico, ARIA y CSS</text>
     <text x="370" y="226" font-size="14" fill="#44403c">Paso 2 · Estado inmutable y key</text>
-    <text x="370" y="254" font-size="14" fill="#44403c">Paso 3 · Tipos seguros en inputs</text>
+    <text x="370" y="254" font-size="14" fill="#44403c">Paso 3 · Narrowing y Zod</text>
     <text x="370" y="282" font-size="14" fill="#44403c">Paso 4 · fetch, Abort y frontera</text>
     <text x="370" y="310" font-size="14" fill="#44403c">Paso 5 · Tests desde cero (Vitest)</text>
-    <text x="370" y="348" font-size="13" font-family="Menlo, monospace" fill="#1d4ed8">npm run check:pasoN</text>
-    <rect x="666" y="100" width="296" height="270" rx="12" fill="#ffffff" stroke="#d6d3d1"/>
-    <rect x="666" y="100" width="6" height="270" rx="3" fill="#1d4ed8"/>
+    <text x="370" y="372" font-size="13" font-family="Menlo, monospace" fill="#1d4ed8">npm run check:pasoN</text>
+    <rect x="666" y="100" width="296" height="296" rx="12" fill="#ffffff" stroke="#d6d3d1"/>
+    <rect x="666" y="100" width="6" height="296" rx="3" fill="#1d4ed8"/>
     <text x="688" y="134" font-size="17" font-weight="700" fill="#1c1917">Android · Kotlin y Compose</text>
     <text x="688" y="170" font-size="14" fill="#b45309" font-weight="600">Paso 0 · doctor y Kotlin básico</text>
     <text x="688" y="198" font-size="14" fill="#44403c">Paso 1 · Receptores y StateFlow</text>
     <text x="688" y="226" font-size="14" fill="#44403c">Paso 2 · Corrutinas y estado en UI</text>
-    <text x="688" y="254" font-size="14" fill="#44403c">Paso 3 · HTTP y JSON tolerante</text>
-    <text x="688" y="282" font-size="14" fill="#44403c">Paso 4 · Primera base de datos y upsert</text>
-    <text x="688" y="310" font-size="14" fill="#44403c">Paso 5 · Tests desde cero (JUnit)</text>
-    <text x="688" y="348" font-size="13" font-family="Menlo, monospace" fill="#1d4ed8">./gradlew pasoN --no-parallel</text>
+    <text x="688" y="254" font-size="14" fill="#44403c">Paso 3 · MVVM, ViewModel y Koin</text>
+    <text x="688" y="282" font-size="14" fill="#44403c">Paso 4 · HTTP y JSON tolerante</text>
+    <text x="688" y="310" font-size="14" fill="#44403c">Paso 5 · Primera base de datos y upsert</text>
+    <text x="688" y="338" font-size="14" fill="#44403c">Paso 6 · Tests desde cero (JUnit)</text>
+    <text x="688" y="372" font-size="13" font-family="Menlo, monospace" fill="#1d4ed8">./gradlew pasoN --no-parallel</text>
   </g>
 </svg>
