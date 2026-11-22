@@ -6,7 +6,7 @@ Este índice reúne tres on-ramps, nivelaciones prácticas para llegar con lo m�
 
 ## Por dónde empezar
 
-Cada on-ramp tiene seis pasos. Backend y Frontend toman unas tres horas y media, y Android unas cuatro horas sin contar la instalación del SDK. El Paso 0 prepara tu entorno y te pone a correr algo real en minutos; hazlo siempre, aunque ya tengas experiencia. Si es tu primera vez con el tema, sigue los pasos del 0 al 5 en orden. Si ya dominas una parte, elige el paso que necesites, porque cada uno se verifica por separado.
+Cada on-ramp tiene seis pasos. Backend y Frontend toman unas tres horas y media, y Android unas cuatro horas y media sin contar la instalación del SDK. El Paso 0 prepara tu entorno y te pone a correr algo real en minutos; hazlo siempre, aunque ya tengas experiencia. Si es tu primera vez con el tema, sigue los pasos del 0 al 5 en orden. Si ya dominas una parte, elige el paso que necesites, porque cada uno se verifica por separado.
 
 Todos los pasos tienen la misma forma. Empiezan con tres preguntas para pensar antes de tocar código, explican por qué el tema importa en el curso y te piden leer, depurar y escribir algo pequeño. Cierran con preguntas sobre un caso nuevo y te piden explicar en tres líneas lo que cambiaste. Si te trabas, hay tres pistas que van de la idea general a un esqueleto de código, nunca a la respuesta completa. En el Paso 5 escribes tus propios tests, y el verificador los corre también contra versiones con un bug para confirmar que de verdad detectan errores.
 
@@ -40,7 +40,7 @@ Verificación con `uv run onramp check --paso 0` hasta `--paso 5`, o `uv run onr
 | 2 | 30 min | Estado inmutable (`Object.is`) y `key` estable al filtrar listas |
 | 3 | 20 min | Convertir el texto de un `<input>` en número con validación y narrowing, sin `as` |
 | 4 | 45 min | `response.ok`, cancelar búsquedas con `AbortController` y la frontera entre cliente y servidor |
-| 5 | 30 min | Tests desde cero con Vitest que se ponen en rojo ante dos versiones con un bug |
+| 5 | 40 min | Tests desde cero con Vitest que se ponen en rojo ante dos versiones con un bug, y un test de componente con `getByRole` |
 
 Verificación con `npm run check:paso0` hasta `npm run check:paso5`, o `npm run check` para todos.
 
@@ -50,7 +50,7 @@ Verificación con `npm run check:paso0` hasta `npm run check:paso5`, o `npm run 
 | --- | --- | --- |
 | 0 | 40 min | Revisar JDK y Android SDK con `doctor`, y Kotlin básico (tipos nulos, `data class`, `filter`/`map`, `when`) |
 | 1 | 50 min | Lambdas con receptor (la sintaxis de Compose y Koin), `sealed interface` y `StateFlow` inmutable |
-| 2 | 45 min | El hilo principal, `suspend` y `delay` con reloj virtual, cancelación con `Job` y estado que sobrevive al redibujo |
+| 2 | 60 min | El hilo principal, `suspend` y `delay` con reloj virtual, cancelación con `Job`, estado que sobrevive al redibujo y tu primer `@Composable` con test de UI |
 | 3 | 40 min | Requests con OkHttp fuera del hilo principal (`withContext`), JSON tolerante a campos nuevos y errores de red, HTTP o de parseo con `MockWebServer` |
 | 4 | 45 min | Tu primera base de datos, tablas, llave primaria, `SELECT` y `ON CONFLICT DO UPDATE` en SQLite, y su equivalente en Room 3 |
 | 5 | 30 min | Tests desde cero con JUnit que se ponen en rojo ante dos versiones con un bug |
