@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg viewBox="0 0 980 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
   <title id="t">Los tres on-ramps, 6 pasos cada uno</title>
-  <desc id="d">Backend, Frontend y Android. Cada on-ramp tiene un Paso 0 de entorno y cinco pasos más, unas dos horas y media en total.</desc>
+  <desc id="d">Backend, Frontend y Android. Cada on-ramp tiene un Paso 0 de entorno y cinco pasos más, de tres horas y media a cuatro horas en total.</desc>
   <rect width="980" height="400" fill="#fafaf7"/>
   <g font-family="Inter, Helvetica, Arial, sans-serif">
     <text x="30" y="50" font-size="24" font-weight="700" fill="#1c1917">On-ramps · 6 pasos antes de cada curso</text>
-    <text x="30" y="78" font-size="15" fill="#57534e">Unas 2.5 horas cada uno · primera vez: del 0 al 5 en orden · cada paso se verifica por separado</text>
+    <text x="30" y="78" font-size="15" fill="#57534e">De 3.5 a 4 horas cada uno · primera vez: del 0 al 5 en orden · cada paso se verifica por separado</text>
     <rect x="30" y="100" width="296" height="270" rx="12" fill="#ffffff" stroke="#d6d3d1"/>
     <rect x="30" y="100" width="6" height="270" rx="3" fill="#1d4ed8"/>
     <text x="52" y="134" font-size="17" font-weight="700" fill="#1c1917">Backend · Python y FastAPI</text>
