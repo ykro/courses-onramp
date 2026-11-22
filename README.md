@@ -1,60 +1,66 @@
-# Repositorios On-Ramp — Nivelación rápida antes de cada curso
+# On-ramps, nivelación antes de cada curso
 
-Este índice reúne los tres repositorios de práctica corta (**~60 minutos cada uno**) pensados para cualquier estudiante que diga *"no entiendo"* o *"el curso está muy avanzado"* antes de entrar a **Backend (FastAPI)**, **Frontend (React y Next.js)** o **Android (Kotlin y Jetpack Compose)**.
+Este índice reúne tres on-ramps, nivelaciones prácticas para llegar con lo mínimo a los cursos de **Backend (FastAPI)**, **Frontend (React y Next.js)** y **Android (Kotlin y Jetpack Compose)**. Están pensados para estudiantes que ya programan (estructuras de datos, algoritmos, orientación a objetos) pero sienten que el curso arranca muy arriba, y para quienes nunca han usado una base de datos.
 
-Cada repositorio tiene **5 pasos independientes**: no hace falta seguirlos en orden. Si ya dominas HTTP o HTML, puedes empezar directo en el **Paso 3**, en el **Paso 5 (Testing desde cero)** o en el tema que necesites reforzar, verificar solo ese paso con un comando y consultar el repositorio de solución donde queda detallado qué se trabajó y qué se cambió en cada paso.
+![Mapa de los tres on-ramps](docs/diagrams/overview.svg)
 
-![Mapa de los tres repositorios On-Ramp](docs/diagrams/overview.svg)
+## Por dónde empezar
 
----
+Cada on-ramp tiene seis pasos y toma unas dos horas y media. El Paso 0 prepara tu entorno y te pone a correr algo real en minutos; hazlo siempre, aunque ya tengas experiencia. Si es tu primera vez con el tema, sigue los pasos del 0 al 5 en orden. Si ya dominas una parte, elige el paso que necesites, porque cada uno se verifica por separado.
 
-## Mapa rápido de repositorios
+Todos los pasos tienen la misma forma. Empiezan con tres preguntas para pensar antes de tocar código, explican por qué el tema importa en el curso y te piden leer, depurar y escribir algo pequeño. Cierran con preguntas sobre un caso nuevo y te piden explicar en tres líneas lo que cambiaste. Si te trabas, hay tres pistas que van de la idea general a un esqueleto de código, nunca a la respuesta completa. En el Paso 5 escribes tus propios tests, y el verificador los corre también contra versiones con un bug para confirmar que de verdad detectan errores.
 
-| Área | Pasos | Repositorio de práctica (empieza aquí) | Solución explicada paso a paso | Repositorio del curso |
-| :--- | :---: | :--- | :--- | :--- |
-| **Backend (Python y FastAPI)** | 5 independientes | [ykro/backend-onramp](https://github.com/ykro/backend-onramp) | [ykro/backend-onramp-solution](https://github.com/ykro/backend-onramp-solution) | [ykro/backend-course](https://github.com/ykro/backend-course) |
-| **Frontend (React y Next.js)** | 5 independientes | [ykro/frontend-onramp](https://github.com/ykro/frontend-onramp) | [ykro/frontend-onramp-solution](https://github.com/ykro/frontend-onramp-solution) | [ykro/frontend-course](https://github.com/ykro/frontend-course) |
-| **Android (Kotlin y Compose)** | 5 independientes | [ykro/android-onramp](https://github.com/ykro/android-onramp) | [ykro/android-onramp-solution](https://github.com/ykro/android-onramp-solution) | [ykro/android-course](https://github.com/ykro/android-course) |
-
----
+| Área | Repositorio de práctica | Solución con respuestas | Curso |
+| :--- | :--- | :--- | :--- |
+| **Backend (Python y FastAPI)** | [ykro/backend-onramp](https://github.com/ykro/backend-onramp) | [ykro/backend-onramp-solution](https://github.com/ykro/backend-onramp-solution) | [ykro/backend-course](https://github.com/ykro/backend-course) |
+| **Frontend (React y Next.js)** | [ykro/frontend-onramp](https://github.com/ykro/frontend-onramp) | [ykro/frontend-onramp-solution](https://github.com/ykro/frontend-onramp-solution) | [ykro/frontend-course](https://github.com/ykro/frontend-course) |
+| **Android (Kotlin y Compose)** | [ykro/android-onramp](https://github.com/ykro/android-onramp) | [ykro/android-onramp-solution](https://github.com/ykro/android-onramp-solution) | [ykro/android-course](https://github.com/ykro/android-course) |
 
 ## Qué practicas en cada uno
 
-### 1. Backend — [ykro/backend-onramp](https://github.com/ykro/backend-onramp)
-- **Paso 1:** peticiones y respuestas HTTP (`201`, `204`, `404`, `422`), validación con Pydantic (`extra="forbid"`, `Decimal`) y aislamiento de estado entre peticiones.
-- **Paso 2:** tu primera base de datos en SQLite puro (`PRAGMA foreign_keys = ON`, PK/FK, `INNER JOIN`, `ORDER BY/LIMIT` con `?` e índice verificado con `EXPLAIN QUERY PLAN`).
-- **Paso 3:** `Depends`, `dependency_overrides`, lectura Base64Url de un JWT y separación `401` frente a `403`.
-- **Paso 4:** protección contra llamadas simultáneas con `threading.Lock` bajo `Barrier(5)`.
-- **Paso 5:** pruebas automatizadas desde cero con `pytest` (Arrange-Act-Assert, casos borde y atrapar un bug plantado).
-- **Lecturas rápidas incluidas:** guía visual de **CI** (`docs/ci.md`), ejemplo de **ADR** (`docs/adr-ejemplo.md`) y `docs/glosario.md`.
-- **Verificación por paso:** `uv run onramp check --paso 1` .. `--paso 5` (o `uv run onramp check` para todos).
-- **Solución paso a paso:** [ykro/backend-onramp-solution](https://github.com/ykro/backend-onramp-solution).
+### Backend, [ykro/backend-onramp](https://github.com/ykro/backend-onramp)
 
-### 2. Frontend — [ykro/frontend-onramp](https://github.com/ykro/frontend-onramp)
-- **Paso 1:** HTML semántico operable con teclado (`<label>`, `aria-invalid`, `aria-describedby`, `getByRole`), Flexbox, CSS Grid de 2 columnas y `:focus-visible`.
-- **Paso 2:** por qué mutar un arreglo con `.push()` congela React (`Object.is`) y por qué `key={index}` desordena inputs al filtrar.
-- **Paso 3:** convertir texto de `<input>` de forma segura sin mentirle a TypeScript con `as number`.
-- **Paso 4:** revisar `response.ok` ante HTTP 404, cancelar búsquedas lentas con `AbortController` y separar `"use client"` de secretos de servidor.
-- **Paso 5:** pruebas automatizadas desde cero con Vitest y Testing Library (Arrange-Act-Assert, casos borde y atrapar un bug plantado).
-- **Lecturas rápidas incluidas:** guías visuales de **CI** (`docs/ci.md`) y **Firebase** (`docs/firebase.md`), ejemplo de **ADR** (`docs/adr-ejemplo.md`) y `docs/glosario.md`.
-- **Verificación por paso:** `npm run check:paso1` .. `check:paso5` (o `npm run check` para todos).
-- **Solución paso a paso:** [ykro/frontend-onramp-solution](https://github.com/ykro/frontend-onramp-solution).
+| Paso | Tiempo | Tema |
+| --- | --- | --- |
+| 0 | 25 min | Instalar `uv`, levantar tu primer servidor con FastAPI y hablarle con el navegador, `/docs` y `curl` |
+| 1 | 30 min | Códigos HTTP (`201`, `204`, `404`, `422`), estado aislado y validación con Pydantic y `Decimal` |
+| 2 | 35 min | Tu primera base de datos, tablas, llaves foráneas, `JOIN`, paginación con parámetros e índices en SQLite |
+| 3 | 25 min | `Depends` y `dependency_overrides`, qué trae un JWT y la diferencia entre `401` y `403` |
+| 4 | 15 min | Requests simultáneos, race conditions y `threading.Lock` |
+| 5 | 20 min | Tests desde cero con `pytest` que se ponen en rojo ante una versión con un bug |
 
-### 3. Android — [ykro/android-onramp](https://github.com/ykro/android-onramp)
-- **Inicio rápido:** `./gradlew doctor --no-parallel` verifica JDK 21+ y `ANDROID_HOME`.
-- **Paso 1:** lambdas con receptor (`Column { Text(...) }`, `module { single { ... } }`), `sealed interface` y `StateFlow` inmutable.
-- **Paso 2:** `suspend` y `delay` con reloj virtual (`runTest` + Turbine), no atrapar `CancellationException` y `remember` al redibujar.
-- **Paso 3:** lectura tolerante de JSON contra `MockWebServer` y errores HTTP/parseo.
-- **Paso 4:** tu primera tabla SQLite (`CREATE TABLE`, `PRIMARY KEY`, `SELECT/ORDER BY` y `ON CONFLICT DO UPDATE` para no borrar favoritos locales + puente a Room 3).
-- **Paso 5:** pruebas automatizadas desde cero con JUnit y Turbine (Arrange-Act-Assert, casos borde y atrapar un bug plantado).
-- **Lecturas rápidas incluidas:** guías visuales de **CI** (`docs/ci.md`) y **Firebase** (`docs/firebase.md`), ejemplo de **ADR** (`docs/adr-ejemplo.md`) y `docs/glosario.md`.
-- **Verificación por paso:** `./gradlew paso1 --no-parallel` .. `paso5` (o `./gradlew ready --no-parallel` para todos, sin emulador).
-- **Solución paso a paso:** [ykro/android-onramp-solution](https://github.com/ykro/android-onramp-solution).
+Verificación con `uv run onramp check --paso 0` hasta `--paso 5`, o `uv run onramp check` para todos.
 
----
+### Frontend, [ykro/frontend-onramp](https://github.com/ykro/frontend-onramp)
 
-## Cómo trabajar con IA y con las soluciones
+| Paso | Tiempo | Tema |
+| --- | --- | --- |
+| 0 | 25 min | Instalar Node, levantar Vite y escribir tu primer componente con props, `useState` y `map` |
+| 1 | 35 min | HTML semántico, roles y nombres accesibles, errores conectados al campo, Grid, Flexbox y `:focus-visible` |
+| 2 | 20 min | Estado inmutable (`Object.is`) y `key` estable al filtrar listas |
+| 3 | 15 min | Convertir el texto de un `<input>` en número con validación y narrowing, sin `as` |
+| 4 | 30 min | `response.ok`, cancelar búsquedas con `AbortController` y la frontera entre cliente y servidor |
+| 5 | 25 min | Tests desde cero con Vitest que se ponen en rojo ante una versión con un bug |
 
-Puedes usar tu asistente de IA favorito (Claude Code, Antigravity, Codex o Gemini CLI) mientras resuelves cualquier paso. Cada repositorio trae un archivo `AGENTS.md` configurado en **modo tutor socrático** para guiarte con preguntas y pistas.
+Verificación con `npm run check:paso0` hasta `npm run check:paso5`, o `npm run check` para todos.
 
-Cuando quieras revisar qué se trabajó exactamente en cada paso o destrabarte en un punto puntual, abre el repositorio `*-solution` correspondiente: su `README.md` tiene la tabla **Dónde ver la solución de cada paso**, enlazando cada criterio directamente al archivo resuelto.
+### Android, [ykro/android-onramp](https://github.com/ykro/android-onramp)
+
+| Paso | Tiempo | Tema |
+| --- | --- | --- |
+| 0 | 25 min | Revisar JDK y Android SDK con `doctor`, y Kotlin básico (tipos nulos, `data class`, `filter`/`map`, `when`) |
+| 1 | 30 min | Lambdas con receptor (la sintaxis de Compose y Koin), `sealed interface` y `StateFlow` inmutable |
+| 2 | 25 min | `suspend` y `delay` con reloj virtual, cancelación y estado que sobrevive al redibujo |
+| 3 | 20 min | Requests con OkHttp, JSON tolerante a campos nuevos y errores HTTP o de parseo con `MockWebServer` |
+| 4 | 30 min | Tu primera base de datos, tablas, llave primaria, `SELECT` y `ON CONFLICT DO UPDATE` en SQLite, y su equivalente en Room 3 |
+| 5 | 20 min | Tests desde cero con JUnit que se ponen en rojo ante una versión con un bug |
+
+Verificación con `./gradlew paso0 --no-parallel` hasta `./gradlew paso5 --no-parallel`, o `./gradlew ready --no-parallel` para todos. No necesita emulador.
+
+Los tres repositorios incluyen un glosario, un ejemplo de cómo leer un ADR y una guía de Integración Continua (CI). Frontend y Android traen además una guía corta de Firebase.
+
+## Cómo usar la IA y las soluciones
+
+Puedes usar tu asistente de IA (Claude Code, Antigravity, Codex o Gemini CLI) mientras resuelves cualquier paso. Cada repositorio trae un `AGENTS.md` que le pide guiarte con preguntas y pistas antes de mostrarte código. Si aceptas código que no puedes explicar con tus palabras, el on-ramp pierde su sentido.
+
+Cada repositorio `*-solution` tiene una tabla que explica qué se cambió en cada paso y por qué, y cada guía de paso termina con las respuestas de autoevaluación. Ábrelo después de intentar, no antes.
