@@ -26,7 +26,7 @@ Cada repositorio tiene **5 pasos independientes**: no hace falta seguirlos en or
 - **Paso 3:** `Depends`, `dependency_overrides`, lectura Base64Url de un JWT y separación `401` frente a `403`.
 - **Paso 4:** protección contra llamadas simultáneas con `threading.Lock` bajo `Barrier(5)`.
 - **Paso 5:** pruebas automatizadas desde cero con `pytest` (Arrange-Act-Assert, casos borde y atrapar un bug plantado).
-- **Lectura rápida incluida:** `docs/glosario.md` y ejemplo de ADR (`docs/adr-ejemplo.md`).
+- **Lecturas rápidas incluidas:** guía visual de **CI** (`docs/ci.md`), ejemplo de **ADR** (`docs/adr-ejemplo.md`) y `docs/glosario.md`.
 - **Verificación por paso:** `uv run onramp check --paso 1` .. `--paso 5` (o `uv run onramp check` para todos).
 - **Solución paso a paso:** [ykro/backend-onramp-solution](https://github.com/ykro/backend-onramp-solution).
 
@@ -36,7 +36,7 @@ Cada repositorio tiene **5 pasos independientes**: no hace falta seguirlos en or
 - **Paso 3:** convertir texto de `<input>` de forma segura sin mentirle a TypeScript con `as number`.
 - **Paso 4:** revisar `response.ok` ante HTTP 404, cancelar búsquedas lentas con `AbortController` y separar `"use client"` de secretos de servidor.
 - **Paso 5:** pruebas automatizadas desde cero con Vitest y Testing Library (Arrange-Act-Assert, casos borde y atrapar un bug plantado).
-- **Lecturas rápidas incluidas:** guía visual de **Firebase** (`docs/firebase.md`), ejemplo de **ADR** (`docs/adr-ejemplo.md`) y `docs/glosario.md`.
+- **Lecturas rápidas incluidas:** guías visuales de **CI** (`docs/ci.md`) y **Firebase** (`docs/firebase.md`), ejemplo de **ADR** (`docs/adr-ejemplo.md`) y `docs/glosario.md`.
 - **Verificación por paso:** `npm run check:paso1` .. `check:paso5` (o `npm run check` para todos).
 - **Solución paso a paso:** [ykro/frontend-onramp-solution](https://github.com/ykro/frontend-onramp-solution).
 
@@ -47,7 +47,7 @@ Cada repositorio tiene **5 pasos independientes**: no hace falta seguirlos en or
 - **Paso 3:** lectura tolerante de JSON contra `MockWebServer` y errores HTTP/parseo.
 - **Paso 4:** tu primera tabla SQLite (`CREATE TABLE`, `PRIMARY KEY`, `SELECT/ORDER BY` y `ON CONFLICT DO UPDATE` para no borrar favoritos locales + puente a Room 3).
 - **Paso 5:** pruebas automatizadas desde cero con JUnit y Turbine (Arrange-Act-Assert, casos borde y atrapar un bug plantado).
-- **Lecturas rápidas incluidas:** guía visual de **Firebase** (`docs/firebase.md`), ejemplo de **ADR** (`docs/adr-ejemplo.md`) y `docs/glosario.md`.
+- **Lecturas rápidas incluidas:** guías visuales de **CI** (`docs/ci.md`) y **Firebase** (`docs/firebase.md`), ejemplo de **ADR** (`docs/adr-ejemplo.md`) y `docs/glosario.md`.
 - **Verificación por paso:** `./gradlew paso1 --no-parallel` .. `paso5` (o `./gradlew ready --no-parallel` para todos, sin emulador).
 - **Solución paso a paso:** [ykro/android-onramp-solution](https://github.com/ykro/android-onramp-solution).
 
