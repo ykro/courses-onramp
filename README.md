@@ -10,9 +10,9 @@ Haz siempre el Paso 0: prepara tu entorno y te pone a correr algo real. Después
 
 | Curso | Para la Unidad 1 | Recorrido completo | Cómo verificar |
 | --- | --- | --- | --- |
-| Backend | Pasos 0, 1, 3 (solo el `TODO 1`) y 5, unas dos horas | 6 pasos, unas cuatro horas | `uv run onramp check --paso N` |
-| Frontend | Pasos 0, 1 (`CA-1.1` y `CA-1.2`), 2, 3 y 5, menos de tres horas | 6 pasos, unas tres horas y media | `npm run check:pasoN` |
-| Android | Pasos 0, 1 (sin el ejercicio 2), 2, 3 y 6, unas tres horas y media | 7 pasos, unas cinco horas | `./gradlew pasoN --no-parallel` |
+| Backend | Pasos 0, 1, 3 (solo el `TODO 1`) y 5, unas dos horas | 6 pasos, unas cuatro horas | `uv run onramp check --paso N` o `uv run onramp check --u1` |
+| Frontend | Pasos 0, 1 (`CA-1.1` y `CA-1.2`), 2, 3 y 5, menos de tres horas | 6 pasos, unas tres horas y media | `npm run check:pasoN` o `npm run check:u1` |
+| Android | Pasos 0, 1, 2, 3 y 6, unas tres horas y media | 7 pasos, unas cinco horas | `./gradlew pasoN --no-parallel` o `./gradlew readyU1 --no-parallel` |
 
 Cada paso empieza con tres preguntas, explica por qué importa en el curso y te pide leer, depurar y escribir algo pequeño. Si te trabas, tres pistas van de la idea general a un esqueleto, nunca a la respuesta. En el último paso escribes tus propios tests, y el verificador los corre contra dos versiones con un bug para confirmar que detectan errores. La tabla de pasos y temas está en el README de cada repositorio.
 
